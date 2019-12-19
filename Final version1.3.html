@@ -1,0 +1,3362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DevOps Manual</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="p-2">
+        <div class="row">
+          <div class="col-3">
+            <a href="https://rainbow.ltts.com" class="logo" target="blank">
+              <img src="./lntlogo.png" alt="LTTSLOGO" srcset="" />
+            </a>
+          </div>
+          <div class="col-9 text-center">
+            <h1 class="title">DevOps Manual</h1>
+          </div>
+        </div>
+		
+      </header>
+      <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-12 m-2 text-right">
+              <h6 class="m-2">LTTS SPS DevOps Practice Team</h6>
+            </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-3">
+            <section class="sidebar">
+              <ul class="navbar-nav nav mr-auto sidenav" id="navAccordion">
+                <li class="nav-item">
+                  <a class="nav-link" id="link_DevOps" href="#"
+                    ><h5>DevOps</h5></a
+                  >
+                </li>
+				<li class="nav-item">
+                  <a
+                    class="nav-link nav-link-collapse"
+                    href="#"
+                    data-toggle="collapse"
+                    data-target="#collapseSubItems1"
+                    aria-controls="collapseSubItems1"
+                    aria-expanded="false"
+                    >Agile Methodologies</a
+                  >
+                  <ul
+                    class="navbar-nav nav-second-level collapse"
+                    id="collapseSubItems1"
+                    data-parent="#navAccordion"
+                  >
+				  
+                    <li class="nav-item">
+                      <a
+                        class="nav-link nav-link-document"
+                        id="link_JIRA"
+                        href="#"
+                      >
+                        <span class="nav-link-text">JIRA</span>
+                      </a>
+                    </li>
+					
+					
+                  </ul>
+                </li>
+				<li class="nav-item">
+                  <a
+                    class="nav-link nav-link-collapse"
+                    href="#"
+                    data-toggle="collapse"
+                    data-target="#collapseSubItems2"
+                    aria-controls="collapseSubItems2"
+                    aria-expanded="false"
+                    >SCM</a
+                  >
+                  <ul
+                    class="navbar-nav nav-second-level collapse"
+                    id="collapseSubItems2"
+                    data-parent="#navAccordion"
+                  >
+                    <li class="nav-item">
+                      <a
+                        class="nav-link nav-link-document active"
+                        href="#"
+                        id="link_GIT"
+                      >
+                        <span class="nav-link-text" id="gt">GIT</span>
+                      </a>
+                    </li>
+					<li class="nav-item">
+                      <a
+                        class="nav-link nav-link-document active"
+                        href="#"
+                        id="link_BITBUCKET"
+                      >
+                        <span class="nav-link-text" id="gt">BITBUCKET</span>
+                      </a>
+           
+                  </ul>
+                </li>
+				<li class="nav-item">
+                  <a
+                    class="nav-link nav-link-collapse"
+                    href="#"
+                    data-toggle="collapse"
+                    data-target="#collapseSubItems3"
+                    aria-controls="collapseSubItems3"
+                    aria-expanded="false"
+                    >Artifacts Management</a
+                  >
+                  <ul
+                    class="navbar-nav nav-second-level collapse"
+                    id="collapseSubItems3"
+                    data-parent="#navAccordion"
+                  >
+                  
+
+                    <li class="nav-item">
+                      <a
+                        class="nav-link nav-link-document"
+                        id="link_Nexus"
+                        href="#"
+                      >
+                        <span class="nav-link-text">Nexus</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link nav-link-collapse"
+                    href="#"
+                    data-toggle="collapse"
+                    data-target="#collapseSubItems4"
+                    aria-controls="collapseSubItems4"
+                    aria-expanded="false"
+                    >Continuous Integration</a
+                  >
+                  <ul
+                    class="navbar-nav nav-second-level collapse"
+                    id="collapseSubItems4"
+                    data-parent="#navAccordion"
+                  >
+
+                    
+                    <li class="nav-item">
+                      <a
+                        class="nav-link nav-link-document"
+                        id="link_Jenkins"
+                        href="#"
+                      >
+                        <span class="nav-link-text">Jenkins</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link nav-link-document"
+                        id="link_Bamboo"
+                        href="#"
+                      >
+                        <span class="nav-link-text">Bamboo</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+				
+                <li class="nav-item">
+                  <a
+                    class="nav-link nav-link-collapse"
+                    href="#"
+                    data-toggle="collapse"
+                    data-target="#collapseSubItems5"
+                    aria-controls="collapseSubItems5"
+                    aria-expanded="false"
+                    >Continuous Testing</a
+                  >
+				  
+                  <ul
+                    class="navbar-nav nav-second-level collapse"
+                    id="collapseSubItems5"
+                    data-parent="#navAccordion"
+                  >
+
+                    <li class="nav-item">
+                      <a
+                        class="nav-link nav-link-document"
+                        id="link_JUNIT"
+                        href="#"
+                      >
+                        <span class="nav-link-text" id="jt">JUNIT</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link nav-link-document"
+                        id="link_SonarQube"
+                        href="#"
+                      >
+                        <span class="nav-link-text" id="sq">SonarQube</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+				<li class="nav-item">
+                  <a
+                    class="nav-link nav-link-collapse"
+                    href="#"
+                    data-toggle="collapse"
+                    data-target="#collapseSubItems6"
+                    aria-controls="collapseSubItems6"
+                    aria-expanded="false"
+                    >Continuous Deployment</a
+                  >
+                  <ul
+                    class="navbar-nav nav-second-level collapse"
+                    id="collapseSubItems6"
+                    data-parent="#navAccordion"
+                  >
+
+                    <li class="nav-item">
+                      <a
+                        class="nav-link nav-link-document"
+                        id="link_CD_using_Jenkins"
+                        href="#"
+                      >
+                        <span class="nav-link-text" id="jt">CD_using_Jenkins</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link nav-link-document"
+                        id="link_CD_using_Gitlab"
+                        href="#"
+                      >
+                        <span class="nav-link-text" id="sq">CD_using_Gitlab</span>
+                      </a>
+                    </li>
+					<li class="nav-item">
+                      <a
+                        class="nav-link nav-link-document"
+                        id="link_CD_Using_Azure_DevOps"
+                        href="#"
+                      >
+                        <span class="nav-link-text" id="sq">CD_Using_Azure_DevOps</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+				<li class="nav-item">
+                  <a
+                    class="nav-link nav-link-collapse"
+                    href="#"
+                    data-toggle="collapse"
+                    data-target="#collapseSubItems7"
+                    aria-controls="collapseSubItems7"
+                    aria-expanded="false"
+                    >Configuration Management</a
+                  >
+                  <ul
+                    class="navbar-nav nav-second-level collapse"
+                    id="collapseSubItems7"
+                    data-parent="#navAccordion"
+                  >
+
+				  
+                    <li class="nav-item">
+                      <a
+                        class="nav-link nav-link-document"
+                        id="link_Ansible"
+                        href="#"
+                      >
+                        <span class="nav-link-text" id="cm">Ansible</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link nav-link-document"
+                        id="link_Terraform"
+                        href="#"
+                      >
+                        <span class="nav-link-text" id="TF">Terraform</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+				<li class="nav-item">
+                  <a
+                    class="nav-link nav-link-collapse"
+                    href="#"
+                    data-toggle="collapse"
+                    data-target="#collapseSubItems8"
+                    aria-controls="collapseSubItems8"
+                    aria-expanded="false"
+                    >Pipeline</a
+                  >
+                  <ul
+                    class="navbar-nav nav-second-level collapse"
+                    id="collapseSubItems8"
+                    data-parent="#navAccordion"
+                  >
+
+                    <li class="nav-item">
+                      <a
+                        class="nav-link nav-link-document"
+                        id="link_ci-cd"
+                        href="#"
+                      >
+                        <span class="nav-link-text" id="cc">ci-cd</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+				<li class="nav-item">
+                  <a
+                    class="nav-link nav-link-collapse"
+                    href="#"
+                    data-toggle="collapse"
+                    data-target="#collapseSubItems9"
+                    aria-controls="collapseSubItems9"
+                    aria-expanded="false"
+                    >Configuration Monitoring</a
+                  >
+                  <ul
+                    class="navbar-nav nav-second-level collapse"
+                    id="collapseSubItems9"
+                    data-parent="#navAccordion"
+                  >
+
+                    <li class="nav-item">
+                      <a
+                        class="nav-link nav-link-document"
+                        id="link_Nagios"
+                        href="#"
+                      >
+                        <span class="nav-link-text" id="jt">Nagios</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link nav-link-document"
+                        id="link_ELK"
+                        href="#"
+                      >
+                        <span class="nav-link-text" id="sq">ELK</span>
+                      </a>
+                    </li>
+					 <li class="nav-item">
+                      <a
+                        class="nav-link nav-link-document"
+                        id="link_Prometheus-Grafana"
+                        href="#"
+                      >
+					  
+                        <span class="nav-link-text" id="sq">Prometheus-Grafana</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+				<li class="nav-item">
+                  <a
+                    class="nav-link nav-link-collapse"
+                    href="#"
+                    data-toggle="collapse"
+                    data-target="#collapseSubItems10"
+                    aria-controls="collapseSubItems10"
+                    aria-expanded="false"
+                    >Containers</a
+                  >
+                  <ul
+                    class="navbar-nav nav-second-level collapse"
+                    id="collapseSubItems10"
+                    data-parent="#navAccordion"
+                  >
+
+                    <li class="nav-item">
+                      <a
+                        class="nav-link nav-link-document"
+                        id="link_Docker"
+                        href="#"
+                      >
+                        <span class="nav-link-text" id="jt">Docker</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link nav-link-document"
+                        id="link_kubernetes"
+                        href="#"
+                      >
+                        <span class="nav-link-text" id="sq">Kubernetes</span>
+                      </a>
+                    </li>
+
+                  </ul>
+                </li>
+				
+				<li class="nav-item">
+                  <a
+                    class="nav-link nav-link-collapse"
+                    href="#"
+                    data-toggle="collapse"
+                    data-target="#collapseSubItems11"
+                    aria-controls="collapseSubItems11"
+                    aria-expanded="false"
+                    >Linux Admin</a
+                  >
+                  <ul
+                    class="navbar-nav nav-second-level collapse"
+                    id="collapseSubItems11"
+                    data-parent="#navAccordion"
+                  >
+                    <li class="nav-item">
+                      <a
+                        class="nav-link nav-link-document"
+                        id="link_Linux-Content"
+                        href="#"
+                      >
+                        <span class="nav-link-text" id="jt">Linux-Content</span>
+                      </a>
+                    </li>
+              </ul>
+			  </li>
+            </section>
+			
+          </div>
+          <div class="col-9">
+            <section class="content">
+              <div class="show" id="devOpsContent">
+                <h3>DevOps Manual</h3>
+                <p>Placeholder to explain something about DevOps</p>
+              </div>
+			  
+
+			  <div class="accordion hide" id="content_JIRA">
+                <h4 id="doument-heading" class="pl-2 pb-3">JIRA</h4>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#JIRA_CONTENT"
+                    aria-expanded="true"
+                    aria-controls="JIRA_CONTENT"
+                    id="heading_JIRA_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      ReferenceDocument
+                    </h6>
+                  </div>
+
+                  <div
+                    id="JIRA_CONTENT"
+                    class="collapse show"
+                    aria-labelledby="heading_JIRA_CONTENT"
+                    data-parent="#content_JIRA"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://en.wikipedia.org/wiki/Jira_(software)/"target="_blank"
+                            >What is JIRA</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://confluence.atlassian.com/jira"target="_blank"
+                            >JIRA Work Flow</a
+                          >
+                        </li>
+						<li>
+                          <a
+                            href="https://confluence.atlassian.com/adminjiraserver071/working-with-workflows-802592661.html"target="_blank"
+                            >JIRA reference3</a
+                          >
+                        </li>
+						                        <li>
+                          <a
+                            href="https://confluence.atlassian.com/adminjiraserver071/working-with-workflows-802592661.html"target="_blank"
+                            >JIRA reference4</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#JIRA_VIDEOS"
+                    aria-expanded="false"
+                    aria-controls="JIRA_VIDEOS"
+                    id="heading_JIRA_VIDEOS"
+                  >
+                    <h6 class="mb-0">
+                      Video
+                    </h6>
+                  </div>
+                  <div
+                    id="JIRA_VIDEOS"
+                    class="collapse"
+                    aria-labelledby="heading_JIRA_VIDEOS"
+                    data-parent="#content_JIRA"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=xrCJv0fTyR8"target="_blank"
+                            >JIRA Video 1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=TsG3OWTDAFY"target="_blank"
+                            >JIRA Video 2</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#JIRA_CONTENT"
+                    aria-expanded="false"
+                    aria-controls="JIRA_CONTENT"
+                    id="heading_JIRA_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Books
+                    </h6>
+                  </div>
+                  <div
+                    id="JIRA_CONTENT"
+                    class="collapse"
+                    aria-labelledby="heading_JIRA_CONTENT"
+                    data-parent="#content_JIRA"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="./Books/The DevOps 2.0 Toolkit.pdf"target="_blank"
+                            >DEVOPS Tool-KIT PDF</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"target="_blank"
+                            >JIRA Book</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion hide" id="content_GIT">
+                <h4 id="doument-heading" class="pl-2 pb-3">GIT</h4>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#CI_GIT_CONTENT"
+                    aria-expanded="true"
+                    aria-controls="CI_GIT_CONTENT"
+                    id="heading_CI_GIT_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                    Book
+                    </h6>
+                  </div>
+
+                  <div
+                    id="CI_GIT_CONTENT"
+                    class="collapse show"
+                    aria-labelledby="heading_CI_GIT_CONTENT"
+                    data-parent="#content_GIT"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://en.wikipedia.org/wiki/Git"target="_blank"
+                            >GIT Wikipedia</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.atlassian.com/git/tutorials/source-code-management"target="_blank"
+                            >What is GIT as SCM</a
+                          >
+                        </li>
+						                        <li>
+                          <a
+                            href="https://www.sitepoint.com/git-for-beginners/"target="_blank"
+                            >GIT reference3</a
+                          >
+                        </li>
+						                        <li>
+                          <a
+                            href="https://www.tutorialspoint.com/git/git_tutorial.pdf"target="_blank"
+                            >GIT reference4</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#CI_GIT_VIDEOS"
+                    aria-expanded="false"
+                    aria-controls="CI_GIT_VIDEOS"
+                    id="heading_CI_GIT_VIDEOS"
+                  >
+                    <h6 class="mb-0">
+                      Video
+                    </h6>
+                  </div>
+                  <div
+                    id="CI_GIT_VIDEOS"
+                    class="collapse"
+                    aria-labelledby="heading_CI_GIT_VIDEOS"
+                    data-parent="#content_GIT"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://intellipaat.com/blog/tutorial/devops-tutorial/git-tutorial/"target="_blank"
+                            >GIT Video 1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=aFBMd0W6pEM"target="_blank"
+                            >GIT Video 2</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#CI_GIT_CONTENT"
+                    aria-expanded="false"
+                    aria-controls="CI_GIT_CONTENT"
+                    id="heading_CI_GIT_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                     Books
+                    </h6>
+                  </div>
+                  <div
+                    id="CI_GIT_CONTENT"
+                    class="collapse"
+                    aria-labelledby="heading_CI_GIT_CONTENT"
+                    data-parent="#content_GIT"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="./Books/Git Community Book.pdf"target="_blank"
+                            >GIT Book</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://git-scm.com/book/en/v2"target="_blank"
+                            >GIT community Book</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+			  
+			  <!-- bit bucket content vedio document code -->
+			  <div class="accordion hide" id="content_BITBUCKET">
+                <h4 id="doument-heading" class="pl-2 pb-3">BITBUCKET</h4>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#CI_BITBUCKET_CONTENT"
+                    aria-expanded="true"
+                    aria-controls="CI_BITBUCKET_CONTENT"
+                    id="heading_CI_BITBUCKET_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      ReferenceDocument
+                    </h6>
+                  </div>
+
+                  <div
+                    id="CI_BITBUCKET_CONTENT"
+                    class="collapse show"
+                    aria-labelledby="heading_CI_BITBUCKET_CONTENT"
+                    data-parent="#content_BITBUCKET"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://en.wikipedia.org/wiki/Bitbucket"target="_blank"
+                            >BITBUCKET Wikipedia </a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://confluence.atlassian.com/confeval/development-tools-evaluator-resources/bitbucket/bitbucket-what-is-bitbucket"target="_blank"
+                            >What is BITBUCKET </a
+                          >
+                        </li>
+						<li>
+                          <a
+                            href="https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud"target="_blank"
+                            >BITBUCKET reference3</a
+                          >
+                        </li>
+						<li>
+                          <a
+                            href="https://confluence.atlassian.com/bitbucket/tutorials-755338051.html"target="_blank"
+                            >BITBUCKET reference4</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#CI_BITBUCKET_VIDEOS"
+                    aria-expanded="false"
+                    aria-controls="CI_BITBUCKET_VIDEOS"
+                    id="heading_CI_BITBUCKET_VIDEOS"
+                  >
+                    <h6 class="mb-0">
+                      Video
+                    </h6>
+                  </div>
+                  <div
+                    id="CI_BITBUCKET_VIDEOS"
+                    class="collapse"
+                    aria-labelledby="heading_CI_BITBUCKET_VIDEOS"
+                    data-parent="#content_BITBUCKET"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=i5T-DB8tb4A"target="_blank"
+                            >BITBUCKET Video 1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=dCvjIo6nfHo"target="_blank"
+                            >BITBUCKET Video 2</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#CI_BITBUCKET_CONTENT"
+                    aria-expanded="false"
+                    aria-controls="CI_BITBUCKET_CONTENT"
+                    id="heading_CI_BITBUCKET_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Books
+                    </h6>
+                  </div>
+                  <div
+                    id="CI_BITBUCKET_CONTENT"
+                    class="collapse"
+                    aria-labelledby="heading_CI_BITBUCKET_CONTENT"
+                    data-parent="#content_BITBUCKET"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="#"target="_blank"
+                            >Book1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"target="_blank"
+                            >Book2</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+			  
+			   
+			  <!-- end of bit bucket -->
+			  
+			  <!-- Maven build content demo document -->
+			  <div class="accordion hide" id="content_Maven">
+                <h4 id="doument-heading" class="pl-2 pb-3">Maven</h4>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Maven_CONTENT"
+                    aria-expanded="true"
+                    aria-controls="Maven_CONTENT"
+                    id="heading_Maven_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      ReferenceDocument
+                    </h6>
+                  </div>
+
+                  <div
+                    id="Maven_CONTENT"
+                    class="collapse show"
+                    aria-labelledby="heading_Maven_CONTENT"
+                    data-parent="#content_Maven"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://en.wikipedia.org/wiki/Build_automation"target="_blank"
+                            >ReferenceDocument1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.tutorialspoint.com/maven/index.htm"target="_blank"
+                            >ReferenceDocument2</a
+                          >
+                        </li>
+						<li>
+                          <a
+                            href="https://www.tutorialspoint.com/maven/maven_tutorial.pdf"target="_blank"
+                            >ReferenceDocument3</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Maven_VIDEOS"
+                    aria-expanded="false"
+                    aria-controls="Maven_VIDEOS"
+                    id="heading_Maven_VIDEOS"
+                  >
+                    <h6 class="mb-0">
+                      Video
+                    </h6>
+                  </div>
+                  <div
+                    id="Maven_VIDEOS"
+                    class="collapse"
+                    aria-labelledby="heading_Maven_VIDEOS"
+                    data-parent="#content_Maven"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=fyToL0kZLKQ"target="_blank"
+                            >Maven Video 1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=0CFWeVgzsqY"target="_blank"
+                            >Maven Video 2</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Maven_CONTENT"
+                    aria-expanded="false"
+                    aria-controls="Maven_CONTENT"
+                    id="heading_Maven_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Book
+                    </h6>
+                  </div>
+                  <div
+                    id="Maven_CONTENT"
+                    class="collapse"
+                    aria-labelledby="heading_Maven_CONTENT"
+                    data-parent="#content_Maven"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="#"target="_blank"
+                            >Maven Book</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"target="_blank"
+                            >Maven Book</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+			  
+			  <!-- Maven codes end here -->
+			  
+			  <!-- Gradle content document vedio code below -->
+			  
+			  <div class="accordion hide" id="content_Gradle">
+                <h4 id="doument-heading" class="pl-2 pb-3">Gradle</h4>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Gradle_CONTENT"
+                    aria-expanded="true"
+                    aria-controls="Gradle_CONTENT"
+                    id="heading_Gradle_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Content
+                    </h6>
+                  </div>
+
+                  <div
+                    id="Gradle_CONTENT"
+                    class="collapse show"
+                    aria-labelledby="heading_Gradle_CONTENT"
+                    data-parent="#content_Gradle"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href=https://docs.gradle.org/current/userguide/what_is_gradle.html"target="_blank"
+                            >What is Gradle</a
+                          >
+                        </li>
+                        <li> 
+                          <a
+                            href="https://www.tutorialspoint.com/gradle/index.htm"target="_blank"
+                            >Gradle Work Flow</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Gradle_VIDEOS"
+                    aria-expanded="false"
+                    aria-controls="Gradle_VIDEOS"
+                    id="heading_Gradle_VIDEOS"
+                  >
+                    <h6 class="mb-0">
+                      Video
+                    </h6>
+                  </div>
+                  <div
+                    id="Gradle_VIDEOS"
+                    class="collapse"
+                    aria-labelledby="heading_Gradle_VIDEOS"
+                    data-parent="#content_Gradle"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=RrVURuzcFhY"target="_blank"
+                            >Gradle Video 1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=NpZmjWBAWK8"target="_blank"
+                            >Gradle Video 2</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Gradle_CONTENT"
+                    aria-expanded="false"
+                    aria-controls="Gradle_CONTENT"
+                    id="heading_Gradle_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Book
+                    </h6>
+                  </div>
+                  <div
+                    id="Gradle_CONTENT"
+                    class="collapse"
+                    aria-labelledby="heading_Gradle_CONTENT"
+                    data-parent="#content_Gradle"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="#"target="_blank"
+                            >Gradle Book</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"target="_blank"
+                            >Gradle Book</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+			  <!-- gradle code end here -->
+			  
+			  
+			  
+			  <!-- MS Build content vedio document code below -->
+			  <div class="accordion hide" id="content_MS_Build">
+                <h4 id="doument-heading" class="pl-2 pb-3">MS_Build</h4>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#MS_Build_CONTENT"
+                    aria-expanded="true"
+                    aria-controls="MS_Build_CONTENT"
+                    id="heading_MS_Build_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      ReferenceDocument
+                    </h6>
+                  </div>
+
+                  <div
+                    id="MS_Build_CONTENT"
+                    class="collapse show"
+                    aria-labelledby="heading_MS_Build_CONTENT"
+                    data-parent="#content_MS_Build"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://en.wikipedia.org/wiki/MSBuild"target="_blank"
+                            >Introduction to MS_Build</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.tutorialspoint.com/dotnet_core/dotnet_core_msbuild.htm"target="_blank"
+                            >MS_Build Work Flow</a
+                          >
+                        </li>
+						                        <li>
+                          <a
+                            href="https://ptgmedia.pearsoncmg.com/images/9780735645240/samplepages/9780735645240.pdf"target="_blank"
+                            >MS_Build  referenceDocument</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#MS_Build_VIDEOS"
+                    aria-expanded="false"
+                    aria-controls="MS_Build_VIDEOS"
+                    id="heading_MS_Build_VIDEOS"
+                  >
+                    <h6 class="mb-0">
+                      Video
+                    </h6>
+                  </div>
+                  <div
+                    id="MS_Build_VIDEOS"
+                    class="collapse"
+                    aria-labelledby="heading_MS_Build_VIDEOS"
+                    data-parent="#content_MS_Build"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=NYrvINDzlA8"
+                            >MS_Build Video 1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=oFyj-qGMqAA"
+                            >MS_Build Video 2</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#MS_Build_CONTENT"
+                    aria-expanded="false"
+                    aria-controls="MS_Build_CONTENT"
+                    id="heading_MS_Build_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Books
+                    </h6>
+                  </div>
+				  
+                  <div
+                    id="MS_Build_CONTENT"
+                    class="collapse"
+                    aria-labelledby="heading_MS_Build_CONTENT"
+                    data-parent="#content_MS_Build"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="#"
+                            >MS Build Book</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"target="_blank"
+                            >MS Build Book</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+			  <!-- MS build code end above -->
+			  
+			  <div class="accordion hide" id="content_Nexus">
+                <h4 id="doument-heading" class="pl-2 pb-3">Nexus</h4>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Nexus_CONTENT"
+                    aria-expanded="true"
+                    aria-controls="Nexus_CONTENT"
+                    id="heading_Nexus_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      ReferenceDocument
+                    </h6>
+                  </div>
+
+                  <div
+                    id="Nexus_CONTENT"
+                    class="collapse show"
+                    aria-labelledby="heading_Nexus_CONTENT"
+                    data-parent="#content_Nexus"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://en.wikipedia.org/wiki/Nexus"target="_blank"
+                            >Nexus wikipedia</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.sonatype.com/product-nexus-repository"target="_blank"
+                            >Nexus Repository | Software Component Management</a
+                          >
+                        </li>
+						                        <li>
+                          <a
+                            href="https://www.vogella.com/tutorials/Nexus/article.html"target="_blank"
+                            >Nexus Repository referenceDocument</a
+                        </li>
+						<li>
+                          <a
+                            href="https://www.devopsschool.com/tutorial/nexus/slides/pdf/nexus-complete-ebook.pdf"target="_blank"
+                            >Nexus Repository referenceDocument</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Nexus_VIDEOS"
+                    aria-expanded="false"
+                    aria-controls="Nexus_VIDEOS"
+                    id="heading_Nexus_VIDEOS"
+                  >
+                    <h6 class="mb-0">
+                      Video
+                    </h6>
+                  </div>
+                  <div
+                    id="Nexus_VIDEOS"
+                    class="collapse"
+                    aria-labelledby="heading_Nexus_VIDEOS"
+                    data-parent="#content_Nexus"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=IYIdEFsIQGk"target="_blank"
+                            >Nexus Video 1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=VBrEPBXuAVE"target="_blank"
+                            >Nexus Video 2</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Nexus_CONTENT"
+                    aria-expanded="false"
+                    aria-controls="Nexus_CONTENT"
+                    id="heading_Nexus_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Books
+                    </h6>
+                  </div>
+                  <div
+                    id="Nexus_CONTENT"
+                    class="collapse"
+                    aria-labelledby="heading_Nexus_CONTENT"
+                    data-parent="#content_Nexus"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href=""target="_blank"
+                            >Nexus Documentation 1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href=""target="_blank"
+                            >Nexus documentation pdf</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+			  <div class="accordion hide" id="content_Jenkins">
+                <h4 id="doument-heading" class="pl-2 pb-3">Jenkins</h4>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Jenkins_CONTENT"
+                    aria-expanded="true"
+                    aria-controls="Jenkins_CONTENT"
+                    id="heading_Jenkins_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Reference Document
+                    </h6>
+                  </div>
+
+                  <div
+                    id="Jenkins_CONTENT"
+                    class="collapse show"
+                    aria-labelledby="heading_Jenkins_CONTENT"
+                    data-parent="#content_Jenkins"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://en.wikipedia.org/wiki/Jira_(software)/"target="_blank"
+                            >Jenkins wikipedia</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.bogotobogo.com/DevOps/Jenkins/images/Intro_install/jenkins-the-definitive-guide.pdf"target="_blank"
+                            >Jenkins Reference Document</a>
+                          
+                        </li>
+						                        <li>
+                          <a
+                            href="https://confluence.atlassian.com/adminjiraserver071/working-with-workflows-802592661.html"target="_blank"
+                            >Jenkins Reference Document</a>
+                          
+                        </li>
+                          
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Jenkins_VIDEOS"
+                    aria-expanded="false"
+                    aria-controls="Jenkins_VIDEOS"
+                    id="heading_Jenkins_VIDEOS"
+                  >
+                    <h6 class="mb-0">
+                      Video
+                    </h6>
+                  </div>
+                  <div
+                    id="Jenkins_VIDEOS"
+                    class="collapse"
+                    aria-labelledby="heading_Jenkins_VIDEOS"
+                    data-parent="#content_Jenkins"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=p7-U1_E_j3w"target="_blank"
+                            >Jenkins Video 1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=LFDrDnKPOTg"target="_blank"
+                            >Jenkins Video 2</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Jenkins_CONTENT"
+                    aria-expanded="false"
+                    aria-controls="Jenkins_CONTENT"
+                    id="heading_Jenkins_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Book
+                    </h6>
+                  </div>
+                  <div
+                    id="Jenkins_CONTENT"
+                    class="collapse"
+                    aria-labelledby="heading_Jenkins_CONTENT"
+                    data-parent="#content_Jenkins"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="./Books/jenkins-the-definitive-guide.pdf"target="_blank"
+                            >Jenkins definitive Book</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="./Books/user-handbook.pdf"target="_blank"
+                            >Jenkins Book</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+			  
+			  <!-- bamboo content document vedio code -->
+			  <div class="accordion hide" id="content_Bamboo">
+                <h4 id="doument-heading" class="pl-2 pb-3">Bamboo</h4>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Bamboo_CONTENT"
+                    aria-expanded="true"
+                    aria-controls="Bamboo_CONTENT"
+                    id="heading_Bamboo_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Content
+                    </h6>
+                  </div>
+
+                  <div
+                    id="Bamboo_CONTENT"
+                    class="collapse show"
+                    aria-labelledby="heading_Bamboo_CONTENT"
+                    data-parent="#content_Bamboo"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://en.wikipedia.org/wiki/Bamboo"target="_blank"
+                            >Bamboo Wiki</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://confluence.atlassian.com/bamboo/understanding-the-bamboo-ci-server-289277285.html"target="_blank"
+                            >Bamboo Reference Document</a
+                          >
+                        </li>
+						<li>
+                          <a
+                            href="https://confluence.atlassian.com/bamboo"target="_blank"
+                            >Bamboo vs Jenkins Comparison | Atlassian</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Bamboo_VIDEOS"
+                    aria-expanded="false"
+                    aria-controls="Bamboo_VIDEOS"
+                    id="heading_Bamboo_VIDEOS"
+                  >
+                    <h6 class="mb-0">
+                      Video
+                    </h6>
+                  </div>
+                  <div
+                    id="Bamboo_VIDEOS"
+                    class="collapse"
+                    aria-labelledby="heading_Bamboo_VIDEOS"
+                    data-parent="#content_Bamboo"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=2IRTnbzk0RQ"target="_blank"
+                            >Bamboo Video 1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=524WEU3PvRU"target="_blank"
+                            >Bamboo Video 2</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Bamboo_CONTENT"
+                    aria-expanded="false"
+                    aria-controls="Bamboo_CONTENT"
+                    id="heading_Bamboo_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Books
+                    </h6>
+                  </div>
+                  <div
+                    id="Bamboo_CONTENT"
+                    class="collapse"
+                    aria-labelledby="heading_Bamboo_CONTENT"
+                    data-parent="#content_Bamboo"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="./Books/Bamboo-and-CI-cutterryan.pdf"target="_blank"
+                            >Bamboo Book</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"target="_blank"
+                            >Bamboo workflow Overview pdf</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+			  
+			  <!-- bamboo end -->
+			  
+			  
+			 <!-- junit content document vedio code below -->
+			 
+			 <div class="accordion hide" id="content_JUNIT">
+                <h4 id="doument-heading" class="pl-2 pb-3">JUNIT</h4>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#JUNIT_CONTENT"
+                    aria-expanded="true"
+                    aria-controls="JUNIT_CONTENT"
+                    id="heading_JUNIT_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Content
+                    </h6>
+                  </div>
+
+                  <div
+                    id="JUNIT_CONTENT"
+                    class="collapse show"
+                    aria-labelledby="heading_JUNIT_CONTENT"
+                    data-parent="#content_JUNIT"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.edureka.co/blog/junit-tutorial/"target="_blank"
+                            >JUNIT Edureka Tutorial</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.guru99.com/junit-tutorial.html"target="_blank"
+                            >JUNIT Work Flow</a
+                          >
+                        </li>
+						<li>
+                          <a
+                            href="https://tutorialspoint.com/junit/junit_tutorial.pdf"target="_blank"
+                            >JUNIT Reference Document</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#JUNIT_VIDEOS"
+                    aria-expanded="false"
+                    aria-controls="JUNIT_VIDEOS"
+                    id="heading_JUNIT_VIDEOS"
+                  >
+                    <h6 class="mb-0">
+                      Video
+                    </h6>
+                  </div>
+                  <div
+                    id="JUNIT_VIDEOS"
+                    class="collapse"
+                    aria-labelledby="heading_JUNIT_VIDEOS"
+                    data-parent="#content_JUNIT"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=o5k9NOR9lrI"target="_blank"
+                            >JUNIT Video 1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=g1j_GcoJxB0"target="_blank"
+                            >JUNIT Video 2</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#JUNIT_CONTENT"
+                    aria-expanded="false"
+                    aria-controls="JUNIT_CONTENT"
+                    id="heading_JUNIT_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Books
+                    </h6>
+                  </div>
+                  <div
+                    id="JUNIT_CONTENT"
+                    class="collapse"
+                    aria-labelledby="heading_JUNIT_CONTENT"
+                    data-parent="#content_JUNIT"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="#"target="_blank"
+                            >JUNIT Book</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"target="_blank"
+                            >JUNIT Book</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+			 <!-- junit code end -->
+			 
+			 
+			 <!-- sonar qube content vedio document -->
+			 
+			 <div class="accordion hide" id="content_SonarQube">
+                <h4 id="doument-heading" class="pl-2 pb-3">SonarQube</h4>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#SonarQube_CONTENT"
+                    aria-expanded="true"
+                    aria-controls="SonarQube_CONTENT"
+                    id="heading_SonarQube_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Reference Document
+                    </h6>
+                  </div>
+
+                  <div
+                    id="SonarQube_CONTENT"
+                    class="collapse show"
+                    aria-labelledby="heading_SonarQube_CONTENT"
+                    data-parent="#content_SonarQube"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://dzone.com/articles/an-introduction-to-code-coverage"target="_blank"
+                            >Introduction to code coverage</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://confluence.atlassian.com/clover/about-code-coverage-71599496.html"target="_blank"
+                            >Coverage Reference Document</a
+                          >
+                        </li>
+						<li>
+                          <a
+                            href="https://zhjwpku.com/assets/pdf/SonarQube_in_Action.pdf"target="_blank"
+                            >Coverage Reference Document</a
+                          >
+                        </li>
+						<li>
+                          <a
+                            href="https://www.baeldung.com/sonar-qube"target="_blank"
+                            >Coverage Reference Document</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#SonarQube_VIDEOS"
+                    aria-expanded="false"
+                    aria-controls="SonarQube_VIDEOS"
+                    id="heading_SonarQube_VIDEOS"
+                  >
+                    <h6 class="mb-0">
+                      Video
+                    </h6>
+                  </div>
+                  <div
+                    id="SonarQube_VIDEOS"
+                    class="collapse"
+                    aria-labelledby="heading_SonarQube_VIDEOS"
+                    data-parent="#content_SonarQube"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=Gu9skLzRSao"target="_blank"
+                            >SonarQube Video 1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=xLO8Q_F3jIg"target="_blank"
+                            >SonarQube Video 2(Installing and setting)</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#SonarQube_CONTENT"
+                    aria-expanded="false"
+                    aria-controls="SonarQube_CONTENT"
+                    id="heading_SonarQube_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Books
+                    </h6>
+                  </div>
+                  <div
+                    id="SonarQube_CONTENT"
+                    class="collapse"
+                    aria-labelledby="heading_SonarQube_CONTENT"
+                    data-parent="#content_SonarQube"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href=""target="_blank"
+                            >SonarQube in Action</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"target="_blank"
+                            >Code Analysis with SonarQube</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+			 <!-- sonarqube code end -->
+			 
+			 
+			 <!-- CD using jenkins content video document -->
+			<div class="accordion hide" id="content_CD_using_Jenkins">
+                <h4 id="doument-heading" class="pl-2 pb-3">CD_using_Jenkins</h4>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#CD_using_Jenkins_CONTENT"
+                    aria-expanded="true"
+                    aria-controls="CD_using_Jenkins_CONTENT"
+                    id="heading_CD_using_Jenkins_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Reference Document
+                    </h6>
+                  </div>
+
+                  <div
+                    id="CD_using_Jenkins_CONTENT"
+                    class="collapse show"
+                    aria-labelledby="heading_CD_using_Jenkins_CONTENT"
+                    data-parent="#content_CD_using_Jenkins"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://dzone.com/articles/building-a-continuous-delivery-pipeline-using-jenk"target="_blank"
+                            >What is CD using Jenkins</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://opensource.com/article/19/9/intro-building-cicd-pipelines-jenkins"target="_blank"
+                            >CD using Jenkins Work Flow</a
+                          >
+                        </li>
+						<li>
+                          <a
+                            href="https://fabric8.io/presentations/JenkinsWorld-CD-Jenkins-Docker-Kubernetes.pdf"target="_blank"
+                            >CD using Jenkins Reference Document</a
+                          >
+                        </li>
+						<li>
+                          <a
+                            href="https://www.cs.colorado.edu/~kena/classes/5828/s12/presentation-materials/bowesjesse.pdf"target="_blank"
+                            >CD using Jenkins Reference Document</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#CD_using_Jenkins_VIDEOS"
+                    aria-expanded="false"
+                    aria-controls="CD_using_Jenkins_VIDEOS"
+                    id="heading_CD_using_Jenkins_VIDEOS"
+                  >
+                    <h6 class="mb-0">
+                      Video
+                    </h6>
+                  </div>
+                  <div
+                    id="CD_using_Jenkins_VIDEOS"
+                    class="collapse"
+                    aria-labelledby="heading_CD_using_Jenkins_VIDEOS"
+                    data-parent="#content_CD_using_Jenkins"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=m0a2CzgLNsc"target="_blank"
+                            >CD using Jenkins Video 1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=PXq2OsdxkqU"target="_blank"
+                            >CD using Jenkins Video 2</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#CD_using_Jenkins_CONTENT"
+                    aria-expanded="false"
+                    aria-controls="CD_using_Jenkins_CONTENT"
+                    id="heading_CD_using_Jenkins_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Books
+                    </h6>
+                  </div>
+                  <div
+                    id="CD_using_Jenkins_CONTENT"
+                    class="collapse"
+                    aria-labelledby="heading_CD_using_Jenkins_CONTENT"
+                    data-parent="#content_CD_using_Jenkins"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="#"target="_blank"
+                            >Book</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"target="_blank"
+                            >Book</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- CD using jenkins code end -->
+			
+			
+			<!-- cd using gitlab -->
+			
+			<div class="accordion hide" id="content_CD_using_Gitlab">
+                <h4 id="doument-heading" class="pl-2 pb-3">CD_using_Gitlab</h4>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#CD_using_Gitlab_CONTENT"
+                    aria-expanded="true"
+                    aria-controls="CD_using_Gitlab_CONTENT"
+                    id="heading_CD_using_Gitlab_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Reference Document
+                    </h6>
+                  </div>
+
+                  <div
+                    id="CD_using_Gitlab_CONTENT"
+                    class="collapse show"
+                    aria-labelledby="heading_CD_using_Gitlab_CONTENT"
+                    data-parent="#content_CD_using_Gitlab"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://hackernoon.com/setting-up-ci-cd-on-gitlab-step-by-step-guide-part-1-826385728223"target="_blank"
+                            >Setting up CI/CD on Gitlab (step by step guide) — Part 1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://docs.bitnami.com/tutorials/create-ci-cd-pipeline-gitlab-kubernetes/"target="_blank"
+                            >Create a Continuous Integration Pipeline with GitLab and Kubernetes</a
+                          >
+                        </li>
+						<li>
+                          <a
+                            href="https://www.tutorialspoint.com/gitlab/gitlab_ci_cd.htm"target="_blank"
+                            >Reference Document</a
+                          >
+                        </li>
+						<li>
+                          <a
+                            href="https://dev.to/zurihunter/beginner-friendly-introduction-to-gitlabcicd-4p5a"target="_blank"
+                            >Reference Document</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#CD_using_Gitlab_VIDEOS"
+                    aria-expanded="false"
+                    aria-controls="CD_using_Gitlab_VIDEOS"
+                    id="heading_CD_using_Gitlab_VIDEOS"
+                  >
+                    <h6 class="mb-0">
+                      Video
+                    </h6>
+                  </div>
+                  <div
+                    id="CD_using_Gitlab_VIDEOS"
+                    class="collapse"
+                    aria-labelledby="heading_CD_using_Gitlab_VIDEOS"
+                    data-parent="#content_CD_using_Gitlab"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=1iXFbchozdY"target="_blank"
+                            >CD_using_Gitlab Video 1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=qgl3F2j-1cI"target="_blank"
+                            >CD_using_Gitlab Video 2</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#CD_using_Gitlab_CONTENT"
+                    aria-expanded="false"
+                    aria-controls="CD_using_Gitlab_CONTENT"
+                    id="heading_CD_using_Gitlab_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Books
+                    </h6>
+                  </div>
+                  <div
+                    id="CD_using_Gitlab_CONTENT"
+                    class="collapse"
+                    aria-labelledby="heading_CD_using_Gitlab_CONTENT"
+                    data-parent="#content_CD_using_Gitlab"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="#"target="_blank"
+                            >CD_using_Gitlab Book</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"target="_blank"
+                            >Book</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+			
+			<!-- code end here -->
+			
+			<!-- cd using azure devops content document vedio code here -->
+			
+			<div class="accordion hide" id="content_CD_Using_Azure_DevOps">
+                <h4 id="doument-heading" class="pl-2 pb-3">CD_Using_Azure_DevOps</h4>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#CD_Using_Azure_DevOps_CONTENT"
+                    aria-expanded="true"
+                    aria-controls="CD_Using_Azure_DevOps_CONTENT"
+                    id="heading_CD_Using_Azure_DevOps_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Reference Document
+                    </h6>
+                  </div>
+
+                  <div
+                    id="CD_Using_Azure_DevOps_CONTENT"
+                    class="collapse show"
+                    aria-labelledby="heading_CD_Using_Azure_DevOps_CONTENT"
+                    data-parent="#content_CD_Using_Azure_DevOps"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.edureka.co/blog/what-is-ansible/"target="_blank"
+                            >What is CD_Using_Azure_DevOps</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://microsoft.github.io/PartsUnlimited/pandp/200.1x-PandP-CICDQuickstartwithVSTS.html"target="_blank"
+                            >CD_Using_Azure_DevOps Work flow templates</a
+                          >
+                        </li>
+						<li>
+                          <a
+                            href="https://mikepfeiffer.io/blog/azure-devops-pipeline"target="_blank"
+                            >CD_Using_Azure_DevOpsWork flow templates</a
+                          >
+                        </li>
+						<li>
+                          <a
+                            href="https://www.azuredevopslabs.com/labs/vstsextend/azuredevopsprojectdotnet/"target="_blank"
+                            >CD_Using_Azure_DevOpsWork flow templates</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#CD_Using_Azure_DevOps_VIDEOS"
+                    aria-expanded="false"
+                    aria-controls="CD_Using_Azure_DevOps_VIDEOS"
+                    id="heading_CD_Using_Azure_DevOps_VIDEOS"
+                  >
+                    <h6 class="mb-0">
+                      Video
+                    </h6>
+                  </div>
+                  <div
+                    id="CD_Using_Azure_DevOps_VIDEOS"
+                    class="collapse"
+                    aria-labelledby="heading_CD_Using_Azure_DevOps_VIDEOS"
+                    data-parent="#content_CD_Using_Azure_DevOps"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=Ce08Sp9g_JI"target="_blank"
+                            >CD_Using_Azure_DevOps Video 1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=jRgLSMlp28U"target="_blank"
+                            >CD_Using_Azure_DevOps Video 2</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#CD_Using_Azure_DevOps_CONTENT"
+                    aria-expanded="false"
+                    aria-controls="CD_Using_Azure_DevOps_CONTENT"
+                    id="heading_CD_Using_Azure_DevOps_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Books
+                    </h6>
+                  </div>
+                  <div
+                    id="CD_Using_Azure_DevOps_CONTENT"
+                    class="collapse"
+                    aria-labelledby="heading_CD_Using_Azure_DevOps"
+                    data-parent="#content_CD_Using_Azure_DevOps"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="#"target="_blank"
+                            >CD_Using_Azure_DevOps Books</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"target="_blank"
+                            >CD_Using_Azure_DevOps Books</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+			
+			<!-- cd using azure devops codes end here -->
+			
+			<!-- ansible content document code -->
+			<div class="accordion hide" id="content_Ansible">
+                <h4 id="doument-heading" class="pl-2 pb-3">Ansible</h4>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Ansible_CONTENT"
+                    aria-expanded="true"
+                    aria-controls="Ansible_CONTENT"
+                    id="heading_Ansible_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Reference Document
+                    </h6>
+                  </div>
+
+                  <div
+                    id="Ansible_CONTENT"
+                    class="collapse show"
+                    aria-labelledby="heading_Ansible_CONTENT"
+                    data-parent="#content_Ansible"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.edureka.co/blog/what-is-ansible/"target="_blank"
+                            >What is Ansible</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://blog.ssdnodes.com/blog/ansible-tutorial-getting-started/"target="_blank"
+                            >Ansible Work flow templates</a
+                          >
+                        </li>
+						<li>
+                          <a
+                            href="https://docs.ansible.com/ansible/latest/user_guide/intro_getting_started.html"target="_blank"
+                            >Ansible Reference Document 1</a
+                          >
+                        </li>
+						<li>
+                          <a
+                            href="https://www.tutorialspoint.com/ansible/index.htm"target="_blank"
+                            >Ansible Reference Document 2</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Ansible_VIDEOS"
+                    aria-expanded="false"
+                    aria-controls="Ansible_VIDEOS"
+                    id="heading_Ansible_VIDEOS"
+                  >
+                    <h6 class="mb-0">
+                      Video
+                    </h6>
+                  </div>
+                  <div
+                    id="Ansible_VIDEOS"
+                    class="collapse"
+                    aria-labelledby="heading_Ansible_VIDEOS"
+                    data-parent="#content_Ansible"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=dCQpaTTTv98"target="_blank"
+                            >Ansibles Video 1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=4nKW2eF-nIw"target="_blank"
+                            >Ansible Video 2</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Ansible_CONTENT"
+                    aria-expanded="false"
+                    aria-controls="Ansible_CONTENT"
+                    id="heading_Ansible_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Books
+                    </h6>
+                  </div>
+                  <div
+                    id="Ansible_CONTENT"
+                    class="collapse"
+                    aria-labelledby="heading_Ansible_CONTENT"
+                    data-parent="#content_Ansible"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="#"target="_blank"
+                            >Ansible Books</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"target="_blank"
+                            >Ansible Books</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+			<!-- ansible end here -->
+			
+			<!-- terraform content vedio document code below -->
+			<div class="accordion hide" id="content_Terraform">
+                <h4 id="doument-heading" class="pl-2 pb-3">Terraform</h4>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Terraform_CONTENT"
+                    aria-expanded="true"
+                    aria-controls="Terraform_CONTENT"
+                    id="heading_Terraform_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Reference Document
+                    </h6>
+                  </div>
+
+                  <div
+                    id="Terraform_CONTENT"
+                    class="collapse show"
+                    aria-labelledby="heading_Terraform_CONTENT"
+                    data-parent="#content_Terraform"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.terraform.io/intro/index.html"target="_blank"
+                            >Introduction to Terraform</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://blog.gruntwork.io/why-we-use-terraform-and-not-chef-puppet-ansible-saltstack-or-cloudformation-7989dad2865c"target="_blank"
+                            >Why we use Terraform and not Chef, Puppet, Ansible, SaltStack, or CloudFormation</a
+                          >
+                        </li>
+						<li>
+                          <a
+                            href="https://www.slashroot.in/terraform-tutorial-what-terraform"target="_blank"
+                            >Terraform Reference Document </a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Terraform_VIDEOS"
+                    aria-expanded="false"
+                    aria-controls="Terraform_VIDEOS"
+                    id="heading_Terraform_VIDEOS"
+                  >
+                    <h6 class="mb-0">
+                      Video
+                    </h6>
+                  </div>
+                  <div
+                    id="Terraform_VIDEOS"
+                    class="collapse"
+                    aria-labelledby="heading_Terraform_VIDEOS"
+                    data-parent="#content_Terraform"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=5WykrpB7qS4"target="_blank"
+                            >Terraform Video 1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=IT-Tpunrf7A"target="_blank"
+                            >Terraform Video 2</a
+                          >
+                        </li>
+						<li>
+                          <a
+                            href="https://www.youtube.com/watch?v=ZDjz16h_BGU"target="_blank"
+                            >Terraform Video 3</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Terraform_CONTENT"
+                    aria-expanded="false"
+                    aria-controls="Terraform_CONTENT"
+                    id="heading_Terraform_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Books
+                    </h6>
+                  </div>
+                  <div
+                    id="Terraform_CONTENT"
+                    class="collapse"
+                    aria-labelledby="heading_Terraform_CONTENT"
+                    data-parent="#content_Terraform"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://terraformbook.com/TheTerraformBook_sample.pdf"target="_blank"
+                            >Terraform Books by James Turnbull</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"target="_blank"
+                            > Terraform Book </a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+			<!-- terraform code end -->
+			
+			<!-- ci/cd content video document -->
+			
+			<div class="accordion hide" id="content_ci-cd">
+                <h4 id="doument-heading" class="pl-2 pb-3">ci-cd</h4>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#ci-cd_CONTENT"
+                    aria-expanded="true"
+                    aria-controls="ci-cd_CONTENT"
+                    id="heading_ci-cd_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Content
+                    </h6>
+                  </div>
+
+                  <div
+                    id="ci/cd_CONTENT"
+                    class="collapse show"
+                    aria-labelledby="heading_ci-cd_CONTENT"
+                    data-parent="#content_ci-cd"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.infoworld.com/article/3271126/what-is-cicd-continuous-integration-and-continuous-delivery-explained.html"target="_blank"
+                            >What is CI/CD</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.edureka.co/blog/ci-cd-pipeline/"target="_blank"
+                            >CI/CD Reference Document</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#ci-cd_VIDEOS"
+                    aria-expanded="false"
+                    aria-controls="ci-cd_VIDEOS"
+                    id="heading_ci-cd_VIDEOS"
+                  >
+                    <h6 class="mb-0">
+                      Video
+                    </h6>
+                  </div>
+                  <div
+                    id="ci-cd_VIDEOS"
+                    class="collapse"
+                    aria-labelledby="heading_ci-cd_VIDEOS"
+                    data-parent="#content_ci-cd"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=m0a2CzgLNsc"target="_blank"
+                            >CI/CD Video 1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=HjXTSbXG1k8"target="_blank"
+                            >CI/CD Video 2</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#ci-cd_CONTENT"
+                    aria-expanded="false"
+                    aria-controls="ci-cd_CONTENT"
+                    id="heading_ci-cd_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Books
+                    </h6>
+                  </div>
+                  <div
+                    id="ci-cd_CONTENT"
+                    class="collapse"
+                    aria-labelledby="heading_ci-cd_CONTENT"
+                    data-parent="#content_ci-cd"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="./Books/JezHumble-CD.pdf"target="_blank"
+                            >CI/CD by JezHumble.pdf </a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="./Books/A Practical Guide to Continuous Delivery.pdf"target="_blank"
+                            >Practical Guide to Continuous Delivery Book</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+			<!-- ci/cd code ends here -->
+			
+			<!--Nagios code -->
+			<div class="accordion hide" id="content_Nagios">
+                <h4 id="doument-heading" class="pl-2 pb-3">Nagios</h4>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Nagios_CONTENT"
+                    aria-expanded="true"
+                    aria-controls="Nagios_CONTENT"
+                    id="heading_Nagios_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Reference Document
+                    </h6>
+                  </div>
+
+                  <div
+                    id="Nagios_CONTENT"
+                    class="collapse show"
+                    aria-labelledby="heading_Nagios_CONTENT"
+                    data-parent="#content_Nagios"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://en.wikipedia.org/wiki/Nagios"target="_blank"
+                            >Nagios Wiki</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.nagios.org/"target="_blank"
+                            >What can Nagios help you do?</a
+                          >
+                        </li>
+						                        <li>
+                          <a
+                            href="https://www.tutorialspoint.com/nagios/nagios_tutorial.pdf"target="_blank"
+                            >Nagios Reference Document</a
+                          >
+                        </li>
+						                        <li>
+                          <a
+                            href="https://nsrc.org/workshops/2013/pacnog14-campus/raw-attachment/wiki/Agenda/nagios.pdf"target="_blank"
+                            >Nagios Reference Document</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Nagios_VIDEOS"
+                    aria-expanded="false"
+                    aria-controls="Nagios_VIDEOS"
+                    id="heading_Nagios_VIDEOS"
+                  >
+                    <h6 class="mb-0">
+                      Video
+                    </h6>
+                  </div>
+                  <div
+                    id="Nagios_VIDEOS"
+                    class="collapse"
+                    aria-labelledby="heading_Nagios_VIDEOS"
+                    data-parent="#content_Nagios"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/user/nagiosvideo"target="_blank"
+                            >Nagios Video 1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=hjzHI0mQXIE"target="_blank"
+                            >Nagios Video 2 (Introduction to Nagios-based Monitoring)</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Nagios_CONTENT"
+                    aria-expanded="false"
+                    aria-controls="Nagios_CONTENT"
+                    id="heading_Nagios_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Books
+                    </h6>
+                  </div>
+                  <div
+                    id="Nagios_CONTENT"
+                    class="collapse"
+                    aria-labelledby="heading_Nagios_CONTENT"
+                    data-parent="#content_Nagios"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="./Books/nagios_tutorial.pdf"target="_blank"
+                            >Nagios Book</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="./Books/nagios2.pdf"target="_blank"
+                            >Nagios Book</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+			
+			<!--Nagios code ends -->
+			
+			<!-- ELK code starts -->
+			<div class="accordion hide" id="content_ELK">
+                <h4 id="doument-heading" class="pl-2 pb-3">ELK</h4>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#ELK_CONTENT"
+                    aria-expanded="true"
+                    aria-controls="ELK_CONTENT"
+                    id="heading_ELK_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Reference Document
+                    </h6>
+                  </div>
+
+                  <div
+                    id="ELK_CONTENT"
+                    class="collapse show"
+                    aria-labelledby="heading_ELK_CONTENT"
+                    data-parent="#content_ELK"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.elastic.co/what-is/elk-stack"target="_blank"
+                            >What is ELK Stack</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.guru99.com/elk-stack-tutorial.html"target="_blank"
+                            >ELK Stack Architecture</a
+                          >
+                        </li>
+						                        <li>
+                          <a
+                            href="https://logz.io/learn/complete-guide-elk-stack/"target="_blank"
+                            >ELK Stack Reference Document</a
+                          >
+                        </li>
+						                        <li>
+                          <a
+                            href="https://wiki.scc.kit.edu/gridkaschool/upload/7/75/Elk-slides-pdf.pdf"target="_blank"
+                            >ELK Stack Reference Document</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#ELK_VIDEOS"
+                    aria-expanded="false"
+                    aria-controls="ELK_VIDEOS"
+                    id="heading_ELK_VIDEOS"
+                  >
+                    <h6 class="mb-0">
+                      Video
+                    </h6>
+                  </div>
+                  <div
+                    id="ELK_VIDEOS"
+                    class="collapse"
+                    aria-labelledby="heading_ELK_VIDEOS"
+                    data-parent="#content_ELK"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=MRMgd6E9AXE"target="_blank"
+                            >ELK Video 1 from Edureka</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=1EnvkPf7t6Y"target="_blank"
+                            >Getting started with ELK Video 2 </a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#ELK_CONTENT"
+                    aria-expanded="false"
+                    aria-controls="ELK_CONTENT"
+                    id="heading_ELK_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Books
+                    </h6>
+                  </div>
+                  <div
+                    id="ELK_CONTENT"
+                    class="collapse"
+                    aria-labelledby="heading_ELK_CONTENT"
+                    data-parent="#content_ELK"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="/Books/Elasticsearch- The Definitive Guide.pdf"target="_blank"
+                            >ELK Definitive Guide Book</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"target="_blank"
+                            >ELK Book 2</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+			
+			<!-- ELK code ends -->
+			
+			<!-- Prometheus-Grafana code starts -->
+			<div class="accordion hide" id="content_Prometheus-Grafana">
+                <h4 id="doument-heading" class="pl-2 pb-3">Prometheus-Grafana</h4>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Prometheus-Grafana_CONTENT"
+                    aria-expanded="true"
+                    aria-controls="Prometheus-Grafana_CONTENT"
+                    id="heading_Prometheus-Grafana_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Reference Document
+                    </h6>
+                  </div>
+
+                  <div
+                    id="Prometheus-Grafana_CONTENT"
+                    class="collapse show"
+                    aria-labelledby="heading_Prometheus-Grafana_CONTENT"
+                    data-parent="#content_Prometheus-Grafana"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://en.wikipedia.org/wiki/Prometheus_(software)"target="_blank"
+                            >What is Prometheus&Grafana</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://logz.io/blog/prometheus-monitoring/"target="_blank"
+                            >Prometheus&Grafana Work Flow</a
+                          >
+                        </li>
+						                        <li>
+                          <a
+                            href="https://www.percona.com/sites/default/files/presentations/percona-univiversity-prometheus-mysql-170622172630.pdf"target="_blank"
+                            >Prometheus&Grafana Reference Document</a
+                          >
+                        </li>
+						                        <li>
+                          <a
+                            href="https://www.grafanacon.org/2016/presentations/brian-brazil-anintroductiontoprometheus.pdf"target="_blank"
+                            >Prometheus & Grafana Reference Document</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Prometheus-Grafana_VIDEOS"
+                    aria-expanded="false"
+                    aria-controls="Prometheus-Grafana_VIDEOS"
+                    id="heading_Prometheus-Grafana_VIDEOS"
+                  >
+                    <h6 class="mb-0">
+                      Video
+                    </h6>
+                  </div>
+                  <div
+                    id="Prometheus-Grafana_VIDEOS"
+                    class="collapse"
+                    aria-labelledby="heading_Prometheus-Grafana_VIDEOS"
+                    data-parent="#content_Prometheus-Grafana"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=-STqqJZG36w" target="_blank"
+                            >Video 1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=agk4MJ4Ctbs" target="_blank"
+                            >Prometheus&Grafana Video 2</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Prometheus-Grafana_CONTENT"
+                    aria-expanded="false"
+                    aria-controls="Prometheus-Grafana_CONTENT"
+                    id="heading_Prometheus-Grafana_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Books
+                    </h6>
+                  </div>
+                  <div
+                    id="Prometheus-Grafana_CONTENT"
+                    class="collapse"
+                    aria-labelledby="heading_Prometheus-Grafana_CONTENT"
+                    data-parent="#content_Prometheus-Grafana"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="./DevOps/Books/JezHumble-CD" target="_blank"
+                            >Prometheus&Grafana Book1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            >Prometheus&Grafana Book</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+			<!-- Dockers code ends -->
+			<div class="accordion hide" id="content_Docker">
+                <h4 id="doument-heading" class="pl-2 pb-3">Docker</h4>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Docker_CONTENT"
+                    aria-expanded="true"
+                    aria-controls="Docker_CONTENT"
+                    id="heading_Docker_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Reference Document
+                    </h6>
+                  </div>
+
+                  <div
+                    id="Docker_CONTENT"
+                    class="collapse show"
+                    aria-labelledby="heading_Docker_CONTENT"
+                    data-parent="#content_Docker"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.tutorialspoint.com/docker/index.htm"target="_blank"
+                            >What is Docker from tutorial point</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.javatpoint.com/docker-tutorial"target="_blank"
+                            >Docker Work Flow from javatpoint</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Docker_VIDEOS"
+                    aria-expanded="false"
+                    aria-controls="Docker_VIDEOS"
+                    id="heading_Docker_VIDEOS"
+                  >
+                    <h6 class="mb-0">
+                      Video
+                    </h6>
+                  </div>
+                  <div
+                    id="Docker_VIDEOS"
+                    class="collapse"
+                    aria-labelledby="heading_Docker_VIDEOS"
+                    data-parent="#content_Docker"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=h0NCZbHjIpY"target="_blank"
+                            >Docker Video 1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=Vyp5_F42NGs"target="_blank"
+                            >Docker Video 2</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Docker_CONTENT"
+                    aria-expanded="false"
+                    aria-controls="Docker_CONTENT"
+                    id="heading_Docker_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Books
+                    </h6>
+                  </div>
+                  <div
+                    id="Docker_CONTENT"
+                    class="collapse"
+                    aria-labelledby="heading_Docker_CONTENT"
+                    data-parent="#content_Docker"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="./Books/Docker - Up & Running.pdf"target="_blank"
+                            >Docker book pdf1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="./Books/Orchestrating Docker"target="_blank"
+                            >Docker book pdf2 by Orchestrating Docker </a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+			<!-- Docker code ends-->
+				<!-- Kubernetes code starts -->
+			<div class="accordion hide" id="content_kubernetes">
+                <h4 id="doument-heading" class="pl-2 pb-3">kubernetes</h4>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#kubernetes_CONTENT"
+                    aria-expanded="true"
+                    aria-controls="kubernetes_CONTENT"
+                    id="heading_kubernetes_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Reference Document
+                    </h6>
+                  </div>
+
+                  <div
+                    id="kubernetes_CONTENT"
+                    class="collapse show"
+                    aria-labelledby="heading_kubernetes_CONTENT"
+                    data-parent="#content_kubernetes"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://kubernetes.io/docs/tutorials/"target="_blank"
+                            >kubernetes</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://courses.cs.washington.edu/courses/cse550/16au/notes/kubernetes.pdf"target="_blank"
+                            >kubernetes</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#kubernetes_VIDEOS"
+                    aria-expanded="false"
+                    aria-controls="kubernetes_VIDEOS"
+                    id="heading_kubernetes_VIDEOS"
+                  >
+                    <h6 class="mb-0">
+                      Video
+                    </h6>
+                  </div>
+                  <div
+                    id="kubernetes_VIDEOS"
+                    class="collapse"
+                    aria-labelledby="heading_kubernetes_VIDEOS"
+                    data-parent="#content_kubernetes"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://youtu.be/EUitQ8DaZW8"target="_blank"
+                            >kubernetes Video 1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=Mn6Jc0AOUTE"target="_blank"
+                            >kubernetes Video 2</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#kubernetes_CONTENT"
+                    aria-expanded="false"
+                    aria-controls="kubernetes_CONTENT"
+                    id="heading_kubernetes_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Books
+                    </h6>
+                  </div>
+                  <div
+                    id="kubernetes_CONTENT"
+                    class="collapse"
+                    aria-labelledby="heading_kubernetes_CONTENT"
+                    data-parent="#content_kubernetes"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="./Books/original.pdf"target="_blank"
+                            >kubernetes Oreilly Book pdf1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="./Books/kubernetes_tutorial.pdf"target="_blank"
+                            >kubernetes </a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+			<!-- Linux Content code starts -->
+			
+			<div class="accordion hide" id="content_Linux-Content">
+                <h4 id="doument-heading" class="pl-2 pb-3">Linux-Content</h4>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Linux-Content_CONTENT"
+                    aria-expanded="true"
+                    aria-controls="Linux-Content_CONTENT"
+                    id="heading_Linux-Content_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Reference Document
+                    </h6>
+                  </div>
+
+                  <div
+                    id="Linux-Content_CONTENT"
+                    class="collapse show"
+                    aria-labelledby="heading_Linux-Content_CONTENT"
+                    data-parent="#content_Linux-Content"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.guru99.com/introduction-linux.html"target="_blank"
+                            >What is Linux_Content</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://linuxhandbook.com/view-file-linux/"target="_blank"
+                            >5 Command for Linux_Content </a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Linux-Content_VIDEOS"
+                    aria-expanded="false"
+                    aria-controls="Linux-Content_VIDEOS"
+                    id="heading_Linux-Content_VIDEOS"
+                  >
+                    <h6 class="mb-0">
+                      Video
+                    </h6>
+                  </div>
+                  <div
+                    id="Linux-Content_VIDEOS"
+                    class="collapse"
+                    aria-labelledby="heading_Linux-Content_VIDEOS"
+                    data-parent="#content_Linux-Content"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=V1y-mbWM3B8"target="_blank"
+                            >Linux_Content Video 1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.youtube.com/watch?v=v_1zB2WNN14"target="_blank"
+                            >Linux_Content Video 2</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header"
+                    data-toggle="collapse"
+                    data-target="#Linux-Content_CONTENT"
+                    aria-expanded="false"
+                    aria-controls="Linux-Content_CONTENT"
+                    id="heading_Linux-Content_CONTENT"
+                  >
+                    <h6 class="mb-0">
+                      Books
+                    </h6>
+                  </div>
+                  <div
+                    id="Linux-Content_CONTENT"
+                    class="collapse"
+                    aria-labelledby="heading_Linux-Content_CONTENT"
+                    data-parent="#content_Linux-Content"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.tuxcademy.org/download/en/grd1/grd1-en-manual.pdf"target="_blank"
+                            >Linux_Content Pdf1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href=""target="_blank"
+                            >Linux_Content Pdf2 </a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>	
+			  
+			<!-- Linux Content code ends -->
+			
+			
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./scripts/jquery-3.3.1.slim.min.js"></script>
+    <script src="./scripts/bootstrap.min.js"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
